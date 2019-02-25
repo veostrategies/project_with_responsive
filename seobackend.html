@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>SEO backend</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+                <a href="#content" class="skip-main"> Skip to content</a>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="rankbrain.html">About Google RankBrain</a></li>
+                <li id="current-page"><a href="seobackend.html">SEO backend</a></li>
+                <li><a href="userintent.html">User Intent</a></li>
+                <li><a href="veoqs.html">VEO Questions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1>Priscilla Nunez</h1>
+   
+    <p>
+        SEO Standards for Back-End Developers
+        Canonicalization
+        A canonical URL is the version of any given web page's URL that we want indexed by search engines.
+        Canonicalization is the process by which we achieve that result. Every page on a website should only be
+        accessible from one URL. Additional URL parameters can be added, if handled using techniques described
+        here.
+    </p>
+    <p>
+        Dealing with www and index pages.
+        By default, all of the following URLs should redirect to www.example.com
+        example.com, example.com/index.(.*), www.example.com/index.(.*)
+        There may be cases where a website owner prefers to use the non-www version or a subdomain as their root
+        domain. That is fine as long as all other versions redirect to that chosen version.
+        Dealing with trailing slashes
+        URLs may have a trailing slash "/" at the end. Sometimes they do not. The server should always redirect to
+        one or the other. Ideally, the version with the slash is preferred.
+        Example: www.example.com/blue-widget should 301 redirect to www.example.com/blue-widget/
+        Note that this is not an issue with root URLs, such as www.example.com. A slash will never appear at the
+        end of that URL.
+    </p>
+    <p>
+        Canonicalizing subpages
+        A product page on an e-commerce website that is accessible at 3 different URLs is not a good idea. The
+        example
+        demonstrates a problem stemming from the CMS architecture. Ideally, there should only be one URL.
+        /product/reebok-black-crossfit-shoe/ET256/
+        /shoes/product/reebok-black-crossfit-shoe/ET256/
+        /shoes/fitness/product/reebok-black-crossfit-shoe/ET256/
+        In this case, where categories and subcategories appear to be constantly changing, the best URL to use is
+        /product/reebok-black-crossfit-shoe/ET256/. No other URLs should open this page. It's okay to add
+        parameters to
+        the URL. For example, the existence of the following URLs is okay if the canonical link tag is used.
+        /product/reebok-black-crossfit-shoe/ET256/
+        /product/reebok-black-crossfit-shoe/ET256/?cat=shoes
+        /product/reebok-black-crossfit-shoe/ET256/?cat=shoes&subcat=fitness
+        For each of the URLs above, what's called the canonical link tag should be added to the
+    </p>
+
+    <p>
+        When a website contains multiple sections, for example a Wordpress-controlled blog, and some other
+        self-contained sections, it may be easier to generate a separate sitemap for each section. These can be
+        linked to using a sitemap index file, as seen in this example: https://www.bluefountainmedia.com/sitemap.xml
+        Updating of the robots.txt file the robots.txt file controls where search engine crawlers are allowed to go.
+        This file should be editable
+        via the CMS. Magento has a list of subdirectories that should be disallowed by default that should be included
+        from the start. Editable page sections Although it is not an SEO requirement, it is beneficial for tracking
+        purposes to be able to edit various
+        parts of all web pages on the website. These include:
+        Immediately after the opening head tag.
+        Immediately before the closing head tag. Immediately after the
+        openingbody tag.
+        Immediately before the closing body tag.
+        There are various tracking scripts that help in obtaining information about user behavior that need to be
+        added to any of these areas. There should be a way to add a tag to all pages as well as each page individually.
+    </p>
+    <div class="image-container">
+    <img class="image" src="images/veo7.png" alt="How do we use voice search?" />
+    </div>
+    <p>
+        Image uploads
+        When images are uploaded via the CMS, file names should be editable rather than being rewritten to a random
+        string by the CMS. Image titles and alt tags should be editable (they usually are in most content
+        management systems).
+    </p>
+    <p id="content">
+        Page speed
+        To optimize page load time, various back-end load time cutting techniques should be employed, a long list
+        of which can be found here: http://gtmetrix.com/recommendations.html. Pages should not take more than 3
+        seconds to load.
+    </p>
+    <div class="image-container">
+    <img class="image" src="images/veo9.jpg" alt="How do we use voice search?" />
+    </div>
+    <p>
+        404 configuration
+        When a random URL is accessed, the server should return a 404 response - not a 302, 200 or any other.
+        Source: Alhan Keser, https://www.bluefountainmedia.com/blog/seo-standards-coders-developers
+    </p>
+    </main>
+    <div id="footer-div">
+        <footer> <span id="loading">©</span>VEO Strategies </footer>
+    </div>
+</body>
+
+</html>
